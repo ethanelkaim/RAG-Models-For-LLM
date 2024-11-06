@@ -19,8 +19,8 @@ def rerank_documents(query, docs, top_n = 3):
         Relevance Score:"""
     )
     
-    # Use the GPT-4 model (adjust as needed)
-    llm = ChatOpenAI(temperature=0, model_name="gpt-4o", max_tokens=4000)
+    # Use the GPT-2 model (adjust as needed)
+    llm = ChatOpenAI(temperature=0, model_name="gpt-2", max_tokens=4000)
     llm_chain = prompt_template | llm.with_structured_output(RatingScore)
     
     scored_docs = []
@@ -50,10 +50,12 @@ def retrieve_passages(query, num_docs, vectorstore):
 
 # Example usage after applying the above code to the PDF document or the data we have.
 query = "" # THE INPUT QUERY
+
+# Need to check about the type of documents we have
 vectorstore = encode_pdf("data.pdf") # Vectorstore of PDF documents
 retrieved_docs = retrieve_passages(query, num_docs=3, vectorstore=vectorstore)
 
-# Print top 3 reranked documents
+# Print top 3 reranked documents and first 200 characters of each
 for i, doc in enumerate(retrieved_docs):
     print(f"\nDocument {i+1}:")
     print(doc.page_content[:200] + "...")
