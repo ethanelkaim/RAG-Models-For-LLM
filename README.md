@@ -12,7 +12,8 @@ This project explores and enhances Retrieval-Augmented Generation (RAG) methods 
 Each model is implemented with a focus on enhancing the indexing and retrieval stages, offering a unique approach to contextually relevant document retrieval and generation.
 
 ### Files:
-- ANN_model.ipynb
+- FAISS_ANN.ipynb
+- Faiss_ANN_semantic_chunking.ipynb
 - Hierarchical_and_Wikipedia_models.ipynb
 
 
@@ -37,16 +38,21 @@ COHERE_API_KEY=your_cohere_api_key
 ### How to Run the Code
 Each model is implemented in a separate Jupyter Notebook. Here’s how to run each model:
 
-1. ANN Model:
+1. FAISS_ANN Model:
 
-* Open ANN_model.ipynb.
+* Open FAISS_ANN.ipynb.
 * Follow the notebook’s instructions to load the dataset, initialize the FAISS index, and run the retrieval and generation steps.
 * This model uses FAISS for ANN indexing, providing efficient document retrieval based on cosine similarity.
 
-2. Hierarchical and Wikipedia Models:
+2. Faiss_ANN with semantic_chunking Model:
+* Open Faiss_ANN_semantic_chunking.ipynb
+* Follow the notebook’s instructions to load the dataset, initialize the FAISS index, apply the semantic chunking and run the retrieval and generation steps.
+* This model uses FAISS for ANN indexing, providing efficient document retrieval based on cosine similarity, while cutting the dataset into semantic chunks.
+
+3. Hierarchical and Wikipedia Models:
 
 * Open Hierarchical_and_Wikipedia_models.ipynb.
-* Follow the notebook’s instructions, I have already written the required API keys, but if needed, you can easily obtain new ones online for free by writting the model name + API key.
+* Follow the notebook’s instructions, we have already written the required API keys, but if needed, you can easily obtain new ones online for free by writting the model name + API key.
 
 ### Evaluation
 Each model includes an evaluation section that measures:
