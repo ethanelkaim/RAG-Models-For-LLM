@@ -1,3 +1,4 @@
+# Retrieval-Augmented Generation (RAG) Models
 
 ## Overview
 This project explores and enhances Retrieval-Augmented Generation (RAG) methods to improve the accuracy and efficiency of large language models (LLMs) on knowledge-intensive tasks. The project evaluates three RAG architectures:
