@@ -55,6 +55,4 @@ Each model includes an evaluation section that measures:
 * Reformulation Consistency: Tests the robustness of responses across different phrasings of the query.
 
 ### Authors
-Ethan Elkaim 
-Eva Karsenty
-Raphael Lasry
+Ethan Elkaim, Eva Karsenty, Raphael Lasry
